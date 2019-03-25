@@ -1,0 +1,138 @@
+18:43:52 **** Incremental Build of configuration Debug for project LCD_GRAPHICS_2 ****
+make all 
+'Building file: ../HPS_usleep/HPS_usleep.c'
+'Invoking: ARM C Compiler 5'
+armcc --cpu=Cortex-A9.no_neon --apcs=/hardfp --arm -O3 -Otime -g --md --depend_format=unix_escaped --no_depend_system_headers --depend_dir="HPS_usleep" -c -o "HPS_usleep/HPS_usleep.o" "../HPS_usleep/HPS_usleep.c"
+'Finished building: ../HPS_usleep/HPS_usleep.c'
+' '
+'Building file: ../DE1SoC_LT24/DE1SoC_LT24.c'
+'Invoking: ARM C Compiler 5'
+armcc --cpu=Cortex-A9.no_neon --apcs=/hardfp --arm -O3 -Otime -g --md --depend_format=unix_escaped --no_depend_system_headers --depend_dir="DE1SoC_LT24" -c -o "DE1SoC_LT24/DE1SoC_LT24.o" "../DE1SoC_LT24/DE1SoC_LT24.c"
+'Finished building: ../DE1SoC_LT24/DE1SoC_LT24.c'
+' '
+'Building file: ../Test.c'
+'Invoking: ARM C Compiler 5'
+armcc --cpu=Cortex-A9.no_neon --apcs=/hardfp --arm -O3 -Otime -g --md --depend_format=unix_escaped --no_depend_system_headers -c -o "Test.o" "../Test.c"
+'Finished building: ../Test.c'
+' '
+'Building file: ../VFP_Enable.c'
+'Invoking: ARM C Compiler 5'
+armcc --cpu=Cortex-A9.no_neon --apcs=/hardfp --arm -O3 -Otime -g --md --depend_format=unix_escaped --no_depend_system_headers -c -o "VFP_Enable.o" "../VFP_Enable.c"
+'Finished building: ../VFP_Enable.c'
+' '
+'Building file: ../main.c'
+'Invoking: ARM C Compiler 5'
+armcc --cpu=Cortex-A9.no_neon --apcs=/hardfp --arm -O3 -Otime -g --md --depend_format=unix_escaped --no_depend_system_headers -c -o "main.o" "../main.c"
+"../main.c", line 22: Warning:  #77-D: this declaration has no storage class or type specifier
+  Graphics_drawLine(unsigned int x1,unsigned int y1,unsigned int x2,unsigned int y2,unsigned short colour);
+  ^
+"../main.c", line 35: Warning:  #177-D: variable "colours"  was declared but never referenced
+  	 unsigned short colours[6] = {LT24_RED,LT24_YELLOW,LT24_GREEN,LT24_CYAN,LT24_BLUE,LT24_MAGENTA};
+  	                ^
+"../main.c", line 36: Warning:  #177-D: variable "colourIdx"  was declared but never referenced
+  	 unsigned int colourIdx = 0;
+  	              ^
+"../main.c", line 37: Warning:  #177-D: variable "x1"  was declared but never referenced
+  	 unsigned int x1=50,y1=50,x2=75,y2=150,x3=100,y3=50;
+  	              ^
+"../main.c", line 37: Warning:  #177-D: variable "y1"  was declared but never referenced
+  	 unsigned int x1=50,y1=50,x2=75,y2=150,x3=100,y3=50;
+  	                    ^
+"../main.c", line 37: Warning:  #177-D: variable "x2"  was declared but never referenced
+  	 unsigned int x1=50,y1=50,x2=75,y2=150,x3=100,y3=50;
+  	                          ^
+"../main.c", line 37: Warning:  #177-D: variable "y2"  was declared but never referenced
+  	 unsigned int x1=50,y1=50,x2=75,y2=150,x3=100,y3=50;
+  	                                ^
+"../main.c", line 37: Warning:  #177-D: variable "x3"  was declared but never referenced
+  	 unsigned int x1=50,y1=50,x2=75,y2=150,x3=100,y3=50;
+  	                                       ^
+"../main.c", line 37: Warning:  #177-D: variable "y3"  was declared but never referenced
+  	 unsigned int x1=50,y1=50,x2=75,y2=150,x3=100,y3=50;
+  	                                              ^
+"../main.c", line 88: Warning:  #177-D: variable "k"  was declared but never referenced
+  	double  k;   //intercept
+  	        ^
+../main.c: 10 warnings, 0 errors
+'Finished building: ../main.c'
+' '
+'Building target: LCD_GRAPHICS_2.axf'
+'Invoking: ARM Linker 5'
+armlink --cpu=Cortex-A9.no_neon --entry=__main --scatter="C:\Users\Kasem\Documents\DS-5 Workspace\lab1\FPGARomRam.scat" --info=sizes -o "LCD_GRAPHICS_2.axf"  ./HPS_usleep/HPS_usleep.o  ./DE1SoC_LT24/DE1SoC_LT24.o  ./Test.o ./VFP_Enable.o ./main.o   
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+      2356         20         24        380          0      12120   DE1SoC_LT24.o
+       120          8          0          0          0       2249   HPS_usleep.o
+        36          0          0          0          0        436   VFP_Enable.o
+       536         20          0          0          0       2982   main.o
+
+    ----------------------------------------------------------------------
+      3048         48         24        380      16384      17787   Object Totals
+         0          0          0          0      16384          0   (incl. Generated)
+         0          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         8          0          0          0          0         68   __main.o
+         0          0          0          0          0          0   __rtentry.o
+        16          0          0          0          0          0   __rtentry2.o
+         8          4          0          0          0          0   __rtentry6.o
+       604          0          0          0          0        144   aeabi_sdivfast_rs.o
+        18          0          0          0          0         80   exit.o
+         0          0          0          0          0          0   indicate_semi.o
+         2          0          0          0          0          0   libinit.o
+         6          0          0          0          0          0   libinit2.o
+         2          0          0          0          0          0   libshutdown.o
+         2          0          0          0          0          0   libshutdown2.o
+         2          0          0          0          0          0   rtexit.o
+        10          0          0          0          0          0   rtexit2.o
+        12          4          0          0          0         68   sys_exit.o
+         2          0          0          0          0         68   use_no_semi.o
+        10          0          0          0          0        116   fpinit.o
+
+    ----------------------------------------------------------------------
+       708          8          0          0          0        544   Library Totals
+         6          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       692          8          0          0          0        428   c_2.l
+        10          0          0          0          0        116   fz_2v.l
+
+    ----------------------------------------------------------------------
+       708          8          0          0          0        544   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      3756         56         24        380      16384      17823   Grand Totals
+      3756         56         24        380      16384      17823   ELF Image Totals
+      3756         56         24        380          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 3780 (   3.69kB)
+    Total RW  Size (RW Data + ZI Data)             16764 (  16.37kB)
+    Total ROM Size (Code + RO Data + RW Data)       4160 (   4.06kB)
+
+==============================================================================
+
+'Finished building target: LCD_GRAPHICS_2.axf'
+' '
+
+18:43:57 Build Finished (took 4s.828ms)
+

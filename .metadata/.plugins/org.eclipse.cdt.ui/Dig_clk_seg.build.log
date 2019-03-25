@@ -1,0 +1,124 @@
+02:21:01 **** Build of configuration Debug for project Dig_clk_seg ****
+make all 
+'Building file: ../seven_seg/seven_seg.c'
+'Invoking: ARM C Compiler 5'
+armcc --cpu=Cortex-A9.no_neon.no_vfp --arm -O0 -g --md --depend_format=unix_escaped --no_depend_system_headers --depend_dir="seven_seg" -c -o "seven_seg/seven_seg.o" "../seven_seg/seven_seg.c"
+"../seven_seg/seven_seg.c", line 21: Warning:  #550-D: variable "dig3"  was set but never used
+  	int dig1=0,dig2=0,dig3=0,temp=0;
+  	                  ^
+../seven_seg/seven_seg.c: 1 warning, 0 errors
+'Finished building: ../seven_seg/seven_seg.c'
+' '
+'Building file: ../Mp_core_timer/Mp_core_timer.c'
+'Invoking: ARM C Compiler 5'
+armcc --cpu=Cortex-A9.no_neon.no_vfp --arm -O0 -g --md --depend_format=unix_escaped --no_depend_system_headers --depend_dir="Mp_core_timer" -c -o "Mp_core_timer/Mp_core_timer.o" "../Mp_core_timer/Mp_core_timer.c"
+"../Mp_core_timer/Mp_core_timer.h", line 18: Warning:  #1295-D: Deprecated declaration Mp_core_timer_finished - give arg types
+  char Mp_core_timer_finished();
+       ^
+"../Mp_core_timer/Mp_core_timer.h", line 19: Warning:  #1295-D: Deprecated declaration Mp_core_timer_read - give arg types
+  unsigned int Mp_core_timer_read();
+               ^
+../Mp_core_timer/Mp_core_timer.c: 2 warnings, 0 errors
+'Finished building: ../Mp_core_timer/Mp_core_timer.c'
+' '
+'Building file: ../main.c'
+'Invoking: ARM C Compiler 5'
+armcc --cpu=Cortex-A9.no_neon.no_vfp --arm -O0 -g --md --depend_format=unix_escaped --no_depend_system_headers -c -o "main.o" "../main.c"
+"../Mp_core_timer/Mp_core_timer.h", line 18: Warning:  #1295-D: Deprecated declaration Mp_core_timer_finished - give arg types
+  char Mp_core_timer_finished();
+       ^
+"../Mp_core_timer/Mp_core_timer.h", line 19: Warning:  #1295-D: Deprecated declaration Mp_core_timer_read - give arg types
+  unsigned int Mp_core_timer_read();
+               ^
+"../main.c", line 31: Warning:  #177-D: variable "f1"  was declared but never referenced
+  int f1=0,f2=0,f3=0;
+      ^
+"../main.c", line 31: Warning:  #177-D: variable "f2"  was declared but never referenced
+  int f1=0,f2=0,f3=0;
+           ^
+"../main.c", line 31: Warning:  #177-D: variable "f3"  was declared but never referenced
+  int f1=0,f2=0,f3=0;
+                ^
+"../main.c", line 36: Warning:  #177-D: variable "n"  was declared but never referenced
+  int n=0;
+      ^
+../main.c: 6 warnings, 0 errors
+'Finished building: ../main.c'
+' '
+'Building target: Dig_clk_seg.axf'
+'Invoking: ARM Linker 5'
+armlink --cpu=Cortex-A9.no_neon.no_vfp --entry=__main --scatter="C:\Users\Kasem\Documents\DS-5 Workspace\lab1\FPGARomRam.scat" --info=sizes -o "Dig_clk_seg.axf"  ./seven_seg/seven_seg.o  ./Mp_core_timer/Mp_core_timer.o  ./main.o   
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       132         16          0         16          0       1582   Mp_core_timer.o
+       300         20          0          8          0       1411   main.o
+      1312          4          0          0          0       2930   seven_seg.o
+
+    ----------------------------------------------------------------------
+      1744         40          0         24      16384       5923   Object Totals
+         0          0          0          0      16384          0   (incl. Generated)
+         0          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         8          0          0          0          0         68   __main.o
+         0          0          0          0          0          0   __rtentry.o
+        12          0          0          0          0          0   __rtentry2.o
+         8          4          0          0          0          0   __rtentry6.o
+       380          0          0          0          0         76   aeabi_sdiv.o
+        18          0          0          0          0         80   exit.o
+         0          0          0          0          0          0   indicate_semi.o
+         2          0          0          0          0          0   libinit.o
+         2          0          0          0          0          0   libinit2.o
+         2          0          0          0          0          0   libshutdown.o
+         2          0          0          0          0          0   libshutdown2.o
+         2          0          0          0          0          0   rtexit.o
+        10          0          0          0          0          0   rtexit2.o
+        12          4          0          0          0         68   sys_exit.o
+         2          0          0          0          0         68   use_no_semi.o
+
+    ----------------------------------------------------------------------
+       464          8          0          0          0        360   Library Totals
+         4          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       460          8          0          0          0        360   c_2.l
+
+    ----------------------------------------------------------------------
+       464          8          0          0          0        360   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      2208         48          0         24      16384       6023   Grand Totals
+      2208         48          0         24      16384       6023   ELF Image Totals
+      2208         48          0         24          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 2208 (   2.16kB)
+    Total RW  Size (RW Data + ZI Data)             16408 (  16.02kB)
+    Total ROM Size (Code + RO Data + RW Data)       2232 (   2.18kB)
+
+==============================================================================
+
+'Finished building target: Dig_clk_seg.axf'
+' '
+
+02:21:04 Build Finished (took 2s.537ms)
+

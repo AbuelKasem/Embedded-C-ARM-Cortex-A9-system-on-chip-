@@ -1,0 +1,1 @@
+joker.o: ../joker.c

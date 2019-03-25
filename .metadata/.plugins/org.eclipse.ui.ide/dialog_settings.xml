@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ExternalProjectImportWizard">
+		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\Kasem\Documents\DS-5 Workspace\Lab8-Interrupts"/>
+			<item value="E:\Mechatronics &amp; Robotics Msc\2nd Semester\Embedded systems  ELEC5620M\Lab 3\Lab3-ServoExample\Lab3-ServoExample"/>
+			<item value="C:\Users\Kasem\Documents\DS-5 Workspace"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+</section>

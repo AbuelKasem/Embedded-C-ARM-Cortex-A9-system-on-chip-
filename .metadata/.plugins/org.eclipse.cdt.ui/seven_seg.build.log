@@ -1,0 +1,7 @@
+19:46:08 **** Clean-only build of configuration Debug for project seven_seg ****
+make clean 
+clean    ./main.d         ./main.o      lab2_seg.axf 
+' '
+
+19:46:08 Build Finished (took 571ms)
+

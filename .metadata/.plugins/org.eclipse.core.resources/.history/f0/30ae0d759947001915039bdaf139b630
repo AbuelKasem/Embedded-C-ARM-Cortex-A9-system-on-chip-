@@ -1,0 +1,136 @@
+/*
+ * DE1-SoC LT24 Example
+ *
+ * Displays a test pattern on the LT24
+ * LCD using the LT24 bare metal driver.
+ *
+ *  Created on: 09 Feb 2018
+ */
+
+#include "DE1SoC_LT24/DE1SoC_LT24.h"
+#include "HPS_Watchdog/HPS_Watchdog.h"
+#include "HPS_usleep/HPS_usleep.h"
+
+//Include our image
+#include "Test.h"
+
+//Debugging Function (same as last lab)
+#include <stdlib.h>
+
+
+Graphics_drawLine(unsigned int x1,unsigned int y1,unsigned int x2,unsigned int y2,unsigned short colour);
+void exitOnFail(signed int status, signed int successStatus){
+    if (status != successStatus) {
+        exit((int)status); //Add breakpoint here to catch failure
+    }
+}
+
+//
+// Main Function
+// =============
+int main(void) {
+	//int i=0;
+    //Initialise the LCD Display.
+	 unsigned short colours[6] = {LT24_RED,LT24_YELLOW,LT24_GREEN,LT24_CYAN,LT24_BLUE,LT24_MAGENTA};
+	 unsigned int colourIdx = 0;
+	// unsigned int xleft=50, ytop=50,  width=100,height=100;
+    exitOnFail(
+            LT24_initialise(0xFF200060,0xFF200080), //Initialise LCD
+            LT24_SUCCESS);                          //Exit if not successful
+    HPS_ResetWatchdog();
+    //Display the image. Setting the co-ordinates and size of the image.
+
+   // LT24_setWindow( xleft,  ytop,  width,  height);
+    //LT24_window_background(xleft,  ytop,  width,  height);
+    LT24_clearDisplay(LT24_YELLOW);
+    //LT24_window_background(LT24_BLUE,xleft,  ytop,  width,  height);
+
+
+
+
+    while (1) {
+
+    	Graphics_drawLine(120,160,20,160, LT24_RED);
+
+    	Graphics_drawLine(191,89,120,160, LT24_BLUE);
+
+    	Graphics_drawLine(50,25,200,100, LT24_GREEN);
+
+    	Graphics_drawLine(70,25,70,100, LT24_BLUE);
+
+        HPS_ResetWatchdog(); //Just reset the watchdog.
+    }
+}
+
+Graphics_drawLine(unsigned int x1,unsigned int y1,unsigned int x2,unsigned int y2,unsigned short colour){
+	int dy=0;
+	int dx=0;
+	int f=0; //flag
+	float s=0; //slope
+	float  c=0;   //intercept;
+
+	int x_step=0,y_step=0;
+	int i=0,j=0;
+	dy=y2-y1;
+	dx=x2-x1;
+
+	if(y2>y1){
+	y_step=1;
+
+
+	}
+	else if(y2<y1){
+		y_step=-1;
+	}
+
+
+	if(x2>x1) {
+
+		x_step=1;
+	}
+	else if(x2<x1){
+
+			x_step=-1;
+	}
+
+
+    //y=s*x+c   y1=s*x1+c  , c=y1-s*x1
+	if(x1!=x2) s=(float)dy/(float)dx;
+
+	c=y1-(s*x1);
+	j=y1;
+	if(x1==x2) f=1;
+	else f=0;
+	for(i=x1;(i!=x2|| f);i=i+x_step){   //i >>>x  ,j>>> y
+		if(x1==x2) i=x2;
+		if(y1==y2) j=y2;
+
+	      if(x1!=x2){
+	    		 if(j!=y2){
+	    	  j=s*i+c;}}
+
+	      else if(x1==x2) j=j+y_step;
+
+	      usleep(25000);
+	      LT24_drawPixel(colour,i,j);
+	      usleep(25000);
+	      if(j==y2) f=0;
+	}
+	/*
+	for(i=x1;(i!=x2 || j!=y2);i=i+x_step){
+			if(x1==x2) i=x2;
+			if(y1==y2) j=y2;
+
+		      if(j!=y2){
+		    	  j=slope*i;}
+		    	  //j=j+y_step;}
+
+		      usleep(50000);
+		      LT24_drawPixel(colour,i,j);
+		      usleep(50000);
+		}
+       */
+
+
+}
+

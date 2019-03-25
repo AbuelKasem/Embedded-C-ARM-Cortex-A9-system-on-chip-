@@ -1,0 +1,109 @@
+22:07:34 **** Incremental Build of configuration Debug for project LCD_GRAPHICS_5 ****
+make all 
+'Building file: ../LCD_GRAPHICS/LCD_GRAPHICS.c'
+'Invoking: ARM C Compiler 5'
+armcc --cpu=Cortex-A9.no_neon --apcs=/hardfp --arm -O0 -g --md --depend_format=unix_escaped --no_depend_system_headers --depend_dir="LCD_GRAPHICS" -c -o "LCD_GRAPHICS/LCD_GRAPHICS.o" "../LCD_GRAPHICS/LCD_GRAPHICS.c"
+'Finished building: ../LCD_GRAPHICS/LCD_GRAPHICS.c'
+' '
+'Building file: ../HPS_usleep/HPS_usleep.c'
+'Invoking: ARM C Compiler 5'
+armcc --cpu=Cortex-A9.no_neon --apcs=/hardfp --arm -O0 -g --md --depend_format=unix_escaped --no_depend_system_headers --depend_dir="HPS_usleep" -c -o "HPS_usleep/HPS_usleep.o" "../HPS_usleep/HPS_usleep.c"
+'Finished building: ../HPS_usleep/HPS_usleep.c'
+' '
+'Building file: ../DE1SoC_LT24/DE1SoC_LT24.c'
+'Invoking: ARM C Compiler 5'
+armcc --cpu=Cortex-A9.no_neon --apcs=/hardfp --arm -O0 -g --md --depend_format=unix_escaped --no_depend_system_headers --depend_dir="DE1SoC_LT24" -c -o "DE1SoC_LT24/DE1SoC_LT24.o" "../DE1SoC_LT24/DE1SoC_LT24.c"
+'Finished building: ../DE1SoC_LT24/DE1SoC_LT24.c'
+' '
+'Building file: ../VFP_Enable.c'
+'Invoking: ARM C Compiler 5'
+armcc --cpu=Cortex-A9.no_neon --apcs=/hardfp --arm -O0 -g --md --depend_format=unix_escaped --no_depend_system_headers -c -o "VFP_Enable.o" "../VFP_Enable.c"
+'Finished building: ../VFP_Enable.c'
+' '
+'Building file: ../main.c'
+'Invoking: ARM C Compiler 5'
+armcc --cpu=Cortex-A9.no_neon --apcs=/hardfp --arm -O0 -g --md --depend_format=unix_escaped --no_depend_system_headers -c -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: LCD_GRAPHICS_5.axf'
+'Invoking: ARM Linker 5'
+armlink --cpu=Cortex-A9.no_neon --entry=__main --scatter="C:\Users\Kasem\Documents\DS-5 Workspace\lab1\FPGARomRam.scat" --info=sizes -o "LCD_GRAPHICS_5.axf"  ./LCD_GRAPHICS/LCD_GRAPHICS.o  ./HPS_usleep/HPS_usleep.o  ./DE1SoC_LT24/DE1SoC_LT24.o  ./VFP_Enable.o ./main.o   
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+      2172         36         24        378          0       8710   DE1SoC_LT24.o
+       148          8          0          0          0       1165   HPS_usleep.o
+      2676          4          0          0          0       7353   LCD_GRAPHICS.o
+        36          0          0          0          0        436   VFP_Enable.o
+       744          8          0          0          0       1506   main.o
+
+    ----------------------------------------------------------------------
+      5776         56         24        380      16384      19170   Object Totals
+         0          0          0          0      16384          0   (incl. Generated)
+         0          0          0          2          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         8          0          0          0          0         68   __main.o
+         0          0          0          0          0          0   __rtentry.o
+        16          0          0          0          0          0   __rtentry2.o
+         8          4          0          0          0          0   __rtentry6.o
+       416          0          0          0          0        144   aeabi_sdiv.o
+        18          0          0          0          0         80   exit.o
+         0          0          0          0          0          0   indicate_semi.o
+         2          0          0          0          0          0   libinit.o
+         6          0          0          0          0          0   libinit2.o
+         2          0          0          0          0          0   libshutdown.o
+         2          0          0          0          0          0   libshutdown2.o
+       124          0          0          0          0         96   rt_memcpy_w_ca9.o
+         2          0          0          0          0          0   rtexit.o
+        10          0          0          0          0          0   rtexit2.o
+        12          4          0          0          0         68   sys_exit.o
+         2          0          0          0          0         68   use_no_semi.o
+        10          0          0          0          0        116   fpinit.o
+
+    ----------------------------------------------------------------------
+       644          8          0          0          0        640   Library Totals
+         6          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       628          8          0          0          0        524   c_2.l
+        10          0          0          0          0        116   fz_2v.l
+
+    ----------------------------------------------------------------------
+       644          8          0          0          0        640   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      6420         64         24        380      16384      19150   Grand Totals
+      6420         64         24        380      16384      19150   ELF Image Totals
+      6420         64         24        380          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 6444 (   6.29kB)
+    Total RW  Size (RW Data + ZI Data)             16764 (  16.37kB)
+    Total ROM Size (Code + RO Data + RW Data)       6824 (   6.66kB)
+
+==============================================================================
+
+'Finished building target: LCD_GRAPHICS_5.axf'
+' '
+
+22:07:38 Build Finished (took 4s.746ms)
+

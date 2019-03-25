@@ -1,0 +1,86 @@
+21:46:43 **** Build of configuration Debug for project l1 ****
+make all 
+'Building file: ../main.c'
+'Invoking: ARM C Compiler 5'
+armcc -O0 -g --md --depend_format=unix_escaped --no_depend_system_headers -c -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: l1.axf'
+'Invoking: ARM Linker 5'
+armlink --info=sizes -o "l1.axf"  ./main.o   
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+        88          8          0          0          0       2011   main.o
+
+    ----------------------------------------------------------------------
+        88          8         16          0          0       2011   Object Totals
+         0          0         16          0          0          0   (incl. Generated)
+         0          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         8          0          0          0          0         68   __main.o
+         0          0          0          0          0          0   __rtentry.o
+        12          0          0          0          0          0   __rtentry2.o
+         8          0          0          0          0          0   __rtentry4.o
+        60          8          0          0          0          0   __scatter.o
+        44          0          0          0          0          0   __scatter_zi.o
+        24          0          0          0          0         80   exit.o
+         0          0          0          0          0          0   indicate_semi.o
+         4          0          0          0          0          0   libinit.o
+         4          0          0          0          0          0   libinit2.o
+         4          0          0          0          0          0   libshutdown.o
+         4          0          0          0          0          0   libshutdown2.o
+        12          4          0          0         96         68   libspace.o
+         4          0          0          0          0          0   rtexit.o
+        12          0          0          0          0          0   rtexit2.o
+        20          4          0          0          0         68   sys_exit.o
+        76          8          0          0          0         80   sys_stackheap.o
+        96          0          0          0          0         80   sys_stackheap_outer.o
+         4          0          0          0          0         68   use_no_semi.o
+
+    ----------------------------------------------------------------------
+       396         24          0          0         96        512   Library Totals
+         0          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       396         24          0          0         96        512   c_4.l
+
+    ----------------------------------------------------------------------
+       396         24          0          0         96        512   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+       484         32         16          0         96       2347   Grand Totals
+       484         32         16          0         96       2347   ELF Image Totals
+       484         32         16          0          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                  500 (   0.49kB)
+    Total RW  Size (RW Data + ZI Data)                96 (   0.09kB)
+    Total ROM Size (Code + RO Data + RW Data)        500 (   0.49kB)
+
+==============================================================================
+
+'Finished building target: l1.axf'
+' '
+
+21:46:44 Build Finished (took 1s.219ms)
+

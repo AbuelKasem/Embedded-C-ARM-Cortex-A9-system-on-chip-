@@ -1,0 +1,86 @@
+01:54:06 **** Build of configuration Debug for project Lab3_NonBlocking_timer ****
+make all 
+'Building file: ../main.c'
+'Invoking: ARM C Compiler 5'
+armcc --cpu=Cortex-A9.no_neon.no_vfp --arm -O0 -g --md --depend_format=unix_escaped --no_depend_system_headers -c -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: Lab3_NonBlocking_timer.axf'
+'Invoking: ARM Linker 5'
+armlink --cpu=Cortex-A9.no_neon.no_vfp --entry=__main --scatter="C:\Users\Kasem\Documents\DS-5 Workspace\lab1\FPGARomRam.scat" --info=sizes -o "Lab3_NonBlocking_timer.axf"  ./main.o   
+"C:\Users\Kasem\Documents\DS-5 Workspace\lab1\FPGARomRam.scat", line 9 (column 12): Warning: L6329W: Pattern *(RW) only matches removed unused sections.
+"C:\Users\Kasem\Documents\DS-5 Workspace\lab1\FPGARomRam.scat", line 9 (column 16): Warning: L6329W: Pattern *(ZI) only matches removed unused sections.
+Finished: 0 information, 2 warning and 0 error messages.
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       272         16         40          0          0       2715   main.o
+
+    ----------------------------------------------------------------------
+       272         16         40          0      16384       2715   Object Totals
+         0          0          0          0      16384          0   (incl. Generated)
+         0          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         8          0          0          0          0         68   __main.o
+         0          0          0          0          0          0   __rtentry.o
+        12          0          0          0          0          0   __rtentry2.o
+         8          4          0          0          0          0   __rtentry6.o
+        18          0          0          0          0         80   exit.o
+         0          0          0          0          0          0   indicate_semi.o
+         2          0          0          0          0          0   libinit.o
+         2          0          0          0          0          0   libinit2.o
+         2          0          0          0          0          0   libshutdown.o
+         2          0          0          0          0          0   libshutdown2.o
+        78          0          0          0          0         80   rt_memclr_w.o
+       124          0          0          0          0         96   rt_memcpy_w_ca9.o
+         2          0          0          0          0          0   rtexit.o
+        10          0          0          0          0          0   rtexit2.o
+        12          4          0          0          0         68   sys_exit.o
+         2          0          0          0          0         68   use_no_semi.o
+
+    ----------------------------------------------------------------------
+       284          8          0          0          0        460   Library Totals
+         2          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       282          8          0          0          0        460   c_2.l
+
+    ----------------------------------------------------------------------
+       284          8          0          0          0        460   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+       556         24         40          0      16384       2967   Grand Totals
+       556         24         40          0      16384       2967   ELF Image Totals
+       556         24         40          0          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                  596 (   0.58kB)
+    Total RW  Size (RW Data + ZI Data)             16384 (  16.00kB)
+    Total ROM Size (Code + RO Data + RW Data)        596 (   0.58kB)
+
+==============================================================================
+
+'Finished building target: Lab3_NonBlocking_timer.axf'
+' '
+
+01:54:08 Build Finished (took 1s.730ms)
+

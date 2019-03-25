@@ -1,0 +1,122 @@
+01:24:42 **** Incremental Build of configuration Debug for project Lab4_Tone_generator ****
+make all 
+'Building file: ../HPS_I2C/HPS_I2C.c'
+'Invoking: ARM C Compiler 5'
+armcc --cpu=Cortex-A9.no_neon.no_vfp --arm -O0 -g --md --depend_format=unix_escaped --no_depend_system_headers --depend_dir="HPS_I2C" -c -o "HPS_I2C/HPS_I2C.o" "../HPS_I2C/HPS_I2C.c"
+'Finished building: ../HPS_I2C/HPS_I2C.c'
+' '
+'Building file: ../DE1SoC_WM8731/DE1SoC_WM8731.c'
+'Invoking: ARM C Compiler 5'
+armcc --cpu=Cortex-A9.no_neon.no_vfp --arm -O0 -g --md --depend_format=unix_escaped --no_depend_system_headers --depend_dir="DE1SoC_WM8731" -c -o "DE1SoC_WM8731/DE1SoC_WM8731.o" "../DE1SoC_WM8731/DE1SoC_WM8731.c"
+'Finished building: ../DE1SoC_WM8731/DE1SoC_WM8731.c'
+' '
+'Building file: ../main.c'
+'Invoking: ARM C Compiler 5'
+armcc --cpu=Cortex-A9.no_neon.no_vfp --arm -O0 -g --md --depend_format=unix_escaped --no_depend_system_headers -c -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: Lab4_Tone_generator.axf'
+'Invoking: ARM Linker 5'
+armlink --cpu=Cortex-A9.no_neon.no_vfp --entry=__main --scatter="C:\Users\Kasem\Documents\DS-5 Workspace\lab1\FPGARomRam.scat" --info=sizes -o "Lab4_Tone_generator.axf"  ./HPS_I2C/HPS_I2C.o  ./DE1SoC_WM8731/DE1SoC_WM8731.o  ./main.o   
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       692          8          0          5          0       2167   DE1SoC_WM8731.o
+       660         16          0         10          0       5582   HPS_I2C.o
+       496         48          0         16          0       1865   main.o
+
+    ----------------------------------------------------------------------
+      1848         72         16         36      16384       9614   Object Totals
+         0          0         16          0      16384          0   (incl. Generated)
+         0          0          0          5          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         8          0          0          0          0         68   __main.o
+         0          0          0          0          0          0   __rtentry.o
+        12          0          0          0          0          0   __rtentry2.o
+         8          4          0          0          0          0   __rtentry6.o
+        52          8          0          0          0          0   __scatter.o
+        28          0          0          0          0          0   __scatter_zi.o
+        22          0          0          0          0        100   _rserrno.o
+        18          0          0          0          0         80   exit.o
+         0          0          0          0          0          0   indicate_semi.o
+         2          0          0          0          0          0   libinit.o
+         2          0          0          0          0          0   libinit2.o
+         2          0          0          0          0          0   libshutdown.o
+         2          0          0          0          0          0   libshutdown2.o
+         0          0          0          0         96          0   libspace.o
+         8          4          0          0          0         68   rt_errno_addr_intlibspace.o
+         2          0          0          0          0          0   rtexit.o
+        10          0          0          0          0          0   rtexit2.o
+        12          4          0          0          0         68   sys_exit.o
+         2          0          0          0          0         68   use_no_semi.o
+       826         16          0          0          0        348   daddsub_clz.o
+        16          4          0          0          0         68   dcheck1.o
+        24          0          0          0          0         68   dcmpi.o
+       688        140          0          0          0        208   ddiv.o
+        94          4          0          0          0         92   dfix.o
+        84          0          0          0          0        136   dflt_clz.o
+       120          4          0          0          0         92   dleqf.o
+       340         12          0          0          0        104   dmul.o
+       156          4          0          0          0         92   dnaninf.o
+        12          0          0          0          0         68   dretinf.o
+       108          0          0          0          0         80   drleqf.o
+       100          0          0          0          0         68   retnan.o
+        92          0          0          0          0         68   scalbn.o
+        48          0          0          0          0         68   trapv.o
+         0          0          0          0          0          0   usenofp.o
+       252         20         48          0          0        128   cos_i.o
+        34          6          0          0          0        204   dunder.o
+        40          0          0          0          0         68   fpclassify.o
+       170          0          0          0          0         96   poly.o
+       900         72        200          0          0        132   rred.o
+       172         10          0          0          0        108   sin.o
+       240         14         40          0          0        128   sin_i.o
+
+    ----------------------------------------------------------------------
+      4720        326        288          0         96       2876   Library Totals
+        14          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       190         20          0          0         96        452   c_2.l
+      2708        184          0          0          0       1560   fz_2s.l
+      1808        122        288          0          0        864   m_2s.l
+
+    ----------------------------------------------------------------------
+      4720        326        288          0         96       2876   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      6568        398        304         36      16480      10962   Grand Totals
+      6568        398        304         36      16480      10962   ELF Image Totals
+      6568        398        304         36          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 6872 (   6.71kB)
+    Total RW  Size (RW Data + ZI Data)             16516 (  16.13kB)
+    Total ROM Size (Code + RO Data + RW Data)       6908 (   6.75kB)
+
+==============================================================================
+
+'Finished building target: Lab4_Tone_generator.axf'
+' '
+
+01:24:45 Build Finished (took 3s.331ms)
+

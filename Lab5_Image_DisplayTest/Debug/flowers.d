@@ -1,0 +1,1 @@
+flowers.o: ../flowers.c

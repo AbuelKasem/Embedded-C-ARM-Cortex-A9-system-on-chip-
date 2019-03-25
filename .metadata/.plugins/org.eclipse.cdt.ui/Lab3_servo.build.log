@@ -1,0 +1,7 @@
+13:34:05 **** Clean-only build of configuration Debug for project Lab3_servo ****
+make clean 
+clean    ./DE1SoC_Servo/DE1SoC_Servo.d  ./main.d         ./DE1SoC_Servo/DE1SoC_Servo.o  ./main.o      Example.axf 
+' '
+
+13:34:06 Build Finished (took 1s.78ms)
+

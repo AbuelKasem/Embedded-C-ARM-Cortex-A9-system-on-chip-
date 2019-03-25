@@ -1,0 +1,133 @@
+04:07:07 **** Build of configuration Debug for project Lab5_Image_DisplayTest ****
+make all 
+'Building file: ../seven_seg/seven_seg.c'
+'Invoking: ARM C Compiler 5'
+armcc -O0 -g --md --depend_format=unix_escaped --no_depend_system_headers --depend_dir="seven_seg" -c -o "seven_seg/seven_seg.o" "../seven_seg/seven_seg.c"
+"../seven_seg/seven_seg.c", line 22: Warning:  #550-D: variable "dig3"  was set but never used
+  	int dig1=0,dig2=0,dig3=0,temp=0;
+  	                  ^
+../seven_seg/seven_seg.c: 1 warning, 0 errors
+'Finished building: ../seven_seg/seven_seg.c'
+' '
+'Building file: ../HPS_usleep/HPS_usleep.c'
+'Invoking: ARM C Compiler 5'
+armcc -O0 -g --md --depend_format=unix_escaped --no_depend_system_headers --depend_dir="HPS_usleep" -c -o "HPS_usleep/HPS_usleep.o" "../HPS_usleep/HPS_usleep.c"
+'Finished building: ../HPS_usleep/HPS_usleep.c'
+' '
+'Building file: ../DE1SoC_LT24/DE1SoC_LT24.c'
+'Invoking: ARM C Compiler 5'
+armcc -O0 -g --md --depend_format=unix_escaped --no_depend_system_headers --depend_dir="DE1SoC_LT24" -c -o "DE1SoC_LT24/DE1SoC_LT24.o" "../DE1SoC_LT24/DE1SoC_LT24.c"
+'Finished building: ../DE1SoC_LT24/DE1SoC_LT24.c'
+' '
+'Building file: ../Test.c'
+'Invoking: ARM C Compiler 5'
+armcc -O0 -g --md --depend_format=unix_escaped --no_depend_system_headers -c -o "Test.o" "../Test.c"
+'Finished building: ../Test.c'
+' '
+'Building file: ../flowers.c'
+'Invoking: ARM C Compiler 5'
+armcc -O0 -g --md --depend_format=unix_escaped --no_depend_system_headers -c -o "flowers.o" "../flowers.c"
+'Finished building: ../flowers.c'
+' '
+'Building file: ../joker.c'
+'Invoking: ARM C Compiler 5'
+armcc -O0 -g --md --depend_format=unix_escaped --no_depend_system_headers -c -o "joker.o" "../joker.c"
+'Finished building: ../joker.c'
+' '
+'Building file: ../main.c'
+'Invoking: ARM C Compiler 5'
+armcc -O0 -g --md --depend_format=unix_escaped --no_depend_system_headers -c -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building file: ../man.c'
+'Invoking: ARM C Compiler 5'
+armcc -O0 -g --md --depend_format=unix_escaped --no_depend_system_headers -c -o "man.o" "../man.c"
+'Finished building: ../man.c'
+' '
+'Building file: ../sea.c'
+'Invoking: ARM C Compiler 5'
+armcc -O0 -g --md --depend_format=unix_escaped --no_depend_system_headers -c -o "sea.o" "../sea.c"
+'Finished building: ../sea.c'
+' '
+'Building target: Lab5_Image_DisplayTest.axf'
+'Invoking: ARM Linker 5'
+armlink --entry=__main --scatter="C:\Users\Kasem\Documents\DS-5 Workspace\Lab5_Image_DisplayTest\DDRRomRam.scat" --info=sizes -o "Lab5_Image_DisplayTest.axf"  ./seven_seg/seven_seg.o  ./HPS_usleep/HPS_usleep.o  ./DE1SoC_LT24/DE1SoC_LT24.o  ./Test.o ./flowers.o ./joker.o ./main.o ./man.o ./sea.o   
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+      2068         40         24        378          0       7931   DE1SoC_LT24.o
+       148          8          0          0          0       1129   HPS_usleep.o
+         0          0     153600          0          0        483   Test.o
+       312         16          0          0          0       1226   main.o
+         0          0     153600          0          0        478   sea.o
+         0          0          0          0          0       1444   seven_seg.o
+
+    ----------------------------------------------------------------------
+      2528         64     307224        380  536870912      12691   Object Totals
+         0          0          0          0  536870912          0   (incl. Generated)
+         0          0          0          2          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         8          0          0          0          0         68   __main.o
+         0          0          0          0          0          0   __rtentry.o
+        12          0          0          0          0          0   __rtentry2.o
+         8          4          0          0          0          0   __rtentry6.o
+       416          0          0          0          0        144   aeabi_sdiv.o
+        24          0          0          0          0         80   exit.o
+         0          0          0          0          0          0   indicate_semi.o
+         4          0          0          0          0          0   libinit.o
+         4          0          0          0          0          0   libinit2.o
+         4          0          0          0          0          0   libshutdown.o
+         4          0          0          0          0          0   libshutdown2.o
+        84          0          0          0          0         80   rt_memclr_w.o
+       100          0          0          0          0         80   rt_memcpy_w.o
+         4          0          0          0          0          0   rtexit.o
+        12          0          0          0          0          0   rtexit2.o
+        20          4          0          0          0         68   sys_exit.o
+         4          0          0          0          0         68   use_no_semi.o
+
+    ----------------------------------------------------------------------
+       708          8          0          0          0        588   Library Totals
+         0          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       708          8          0          0          0        588   c_4.l
+
+    ----------------------------------------------------------------------
+       708          8          0          0          0        588   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      3236         72     307224        380  536870912      12811   Grand Totals
+      3236         72     307224        380  536870912      12811   ELF Image Totals
+      3236         72     307224        380          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)               310460 ( 303.18kB)
+    Total RW  Size (RW Data + ZI Data)         536871292 (524288.37kB)
+    Total ROM Size (Code + RO Data + RW Data)     310840 ( 303.55kB)
+
+==============================================================================
+
+'Finished building target: Lab5_Image_DisplayTest.axf'
+' '
+
+04:07:12 Build Finished (took 5s.726ms)
+

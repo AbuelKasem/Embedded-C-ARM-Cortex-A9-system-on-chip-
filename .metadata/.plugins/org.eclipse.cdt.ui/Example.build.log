@@ -1,0 +1,101 @@
+00:07:14 **** Build of configuration Debug for project Example ****
+make all 
+'Building file: ../DE1SoC_Servo/DE1SoC_Servo.c'
+'Invoking: ARM C Compiler 5'
+armcc --cpu=Cortex-A9.no_neon.no_vfp --arm -O0 -g --md --depend_format=unix_escaped --no_depend_system_headers --depend_dir="DE1SoC_Servo" -c -o "DE1SoC_Servo/DE1SoC_Servo.o" "../DE1SoC_Servo/DE1SoC_Servo.c"
+'Finished building: ../DE1SoC_Servo/DE1SoC_Servo.c'
+' '
+'Building file: ../main.c'
+'Invoking: ARM C Compiler 5'
+armcc --cpu=Cortex-A9.no_neon.no_vfp --arm -O0 -g --md --depend_format=unix_escaped --no_depend_system_headers -c -o "main.o" "../main.c"
+"../main.c", line 82: Warning:  #68-D: integer conversion resulted in a change of sign
+          	                    Servo_pulseWidth(0,128),  //Update Servo 0 position
+          	                                       ^
+"../main.c", line 46: Warning:  #177-D: variable "servoUpdatePeriod"  was declared but never referenced
+      const unsigned int servoUpdatePeriod = 10000; 
+                         ^
+"../main.c", line 47: Warning:  #177-D: variable "servoStep"  was declared but never referenced
+      signed int servoStep = 0;
+                 ^
+../main.c: 3 warnings, 0 errors
+'Finished building: ../main.c'
+' '
+'Building target: Example.axf'
+'Invoking: ARM Linker 5'
+armlink --cpu=Cortex-A9.no_neon.no_vfp --entry=__main --scatter="E:/Mechatronics & Robotics Msc/2nd Semester/Embedded systems  ELEC5620M/Lab 3/Lab3-ServoExample/Lab3-ServoExample/FPGARomRam.scat" --info=sizes -o "Example.axf"  ./DE1SoC_Servo/DE1SoC_Servo.o  ./main.o   
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       740          8          0          5          0       5262   DE1SoC_Servo.o
+       344         16          0          0          0       1570   main.o
+
+    ----------------------------------------------------------------------
+      1084         24          0          8      16384       6832   Object Totals
+         0          0          0          0      16384          0   (incl. Generated)
+         0          0          0          3          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         8          0          0          0          0         68   __main.o
+         0          0          0          0          0          0   __rtentry.o
+        12          0          0          0          0          0   __rtentry2.o
+         8          4          0          0          0          0   __rtentry6.o
+        18          0          0          0          0         80   exit.o
+         0          0          0          0          0          0   indicate_semi.o
+         2          0          0          0          0          0   libinit.o
+         2          0          0          0          0          0   libinit2.o
+         2          0          0          0          0          0   libshutdown.o
+         2          0          0          0          0          0   libshutdown2.o
+         2          0          0          0          0          0   rtexit.o
+        10          0          0          0          0          0   rtexit2.o
+        12          4          0          0          0         68   sys_exit.o
+         2          0          0          0          0         68   use_no_semi.o
+
+    ----------------------------------------------------------------------
+        84          8          0          0          0        284   Library Totals
+         4          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+        80          8          0          0          0        284   c_2.l
+
+    ----------------------------------------------------------------------
+        84          8          0          0          0        284   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      1168         32          0          8      16384       6960   Grand Totals
+      1168         32          0          8      16384       6960   ELF Image Totals
+      1168         32          0          8          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 1168 (   1.14kB)
+    Total RW  Size (RW Data + ZI Data)             16392 (  16.01kB)
+    Total ROM Size (Code + RO Data + RW Data)       1176 (   1.15kB)
+
+==============================================================================
+
+'Finished building target: Example.axf'
+' '
+make --no-print-directory post-build
+'Extract Binary File from Compiler Output'
+fromelf --bin --output=baremetal.bin Example.axf
+' '
+
+00:07:22 Build Finished (took 7s.875ms)
+

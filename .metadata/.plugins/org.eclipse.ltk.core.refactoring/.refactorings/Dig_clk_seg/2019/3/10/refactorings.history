@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;Mp_core_timer.c, Mp_core_timer.h&apos; to &apos;Mp_core_timer&apos;" description="Move 2 resources to &apos;Mp_core_timer&apos;" destination="Mp_core_timer" element1="Mp_core_timer.c" element2="Mp_core_timer.h" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="2" stamp="1551631878964" updateReferences="true"/>
+</session>

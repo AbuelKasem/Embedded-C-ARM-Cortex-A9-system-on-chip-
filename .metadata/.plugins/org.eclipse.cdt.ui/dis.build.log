@@ -1,0 +1,87 @@
+15:31:40 **** Build of configuration Debug for project dis ****
+make all 
+'Building file: ../main.c'
+'Invoking: ARM C Compiler 5'
+armcc -O0 -g --md --depend_format=unix_escaped --no_depend_system_headers -c -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: dis.axf'
+'Invoking: ARM Linker 5'
+armlink --info=sizes -o "dis.axf"  ./main.o   
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       128         12         64          0          0       2520   main.o
+
+    ----------------------------------------------------------------------
+       128         12         80          0          0       2520   Object Totals
+         0          0         16          0          0          0   (incl. Generated)
+         0          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         8          0          0          0          0         68   __main.o
+         0          0          0          0          0          0   __rtentry.o
+        12          0          0          0          0          0   __rtentry2.o
+         8          0          0          0          0          0   __rtentry4.o
+        60          8          0          0          0          0   __scatter.o
+        44          0          0          0          0          0   __scatter_zi.o
+        24          0          0          0          0         80   exit.o
+         0          0          0          0          0          0   indicate_semi.o
+         4          0          0          0          0          0   libinit.o
+         4          0          0          0          0          0   libinit2.o
+         4          0          0          0          0          0   libshutdown.o
+         4          0          0          0          0          0   libshutdown2.o
+        12          4          0          0         96         68   libspace.o
+       100          0          0          0          0         80   rt_memcpy_w.o
+         4          0          0          0          0          0   rtexit.o
+        12          0          0          0          0          0   rtexit2.o
+        20          4          0          0          0         68   sys_exit.o
+        76          8          0          0          0         80   sys_stackheap.o
+        96          0          0          0          0         80   sys_stackheap_outer.o
+         4          0          0          0          0         68   use_no_semi.o
+
+    ----------------------------------------------------------------------
+       496         24          0          0         96        592   Library Totals
+         0          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       496         24          0          0         96        592   c_4.l
+
+    ----------------------------------------------------------------------
+       496         24          0          0         96        592   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+       624         36         80          0         96       2884   Grand Totals
+       624         36         80          0         96       2884   ELF Image Totals
+       624         36         80          0          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                  704 (   0.69kB)
+    Total RW  Size (RW Data + ZI Data)                96 (   0.09kB)
+    Total ROM Size (Code + RO Data + RW Data)        704 (   0.69kB)
+
+==============================================================================
+
+'Finished building target: dis.axf'
+' '
+
+15:31:42 Build Finished (took 2s.0ms)
+

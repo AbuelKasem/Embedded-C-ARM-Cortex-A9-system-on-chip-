@@ -1,0 +1,113 @@
+23:10:53 **** Build of configuration Debug for project Lab5_LCD_T2_DDR ****
+make all 
+'Building file: ../seven_seg/seven_seg.c'
+'Invoking: ARM C Compiler 5'
+armcc -O0 -g --md --depend_format=unix_escaped --no_depend_system_headers --depend_dir="seven_seg" -c -o "seven_seg/seven_seg.o" "../seven_seg/seven_seg.c"
+"../seven_seg/seven_seg.c", line 22: Warning:  #550-D: variable "dig3"  was set but never used
+  	int dig1=0,dig2=0,dig3=0,temp=0;
+  	                  ^
+../seven_seg/seven_seg.c: 1 warning, 0 errors
+'Finished building: ../seven_seg/seven_seg.c'
+' '
+'Building file: ../HPS_usleep/HPS_usleep.c'
+'Invoking: ARM C Compiler 5'
+armcc -O0 -g --md --depend_format=unix_escaped --no_depend_system_headers --depend_dir="HPS_usleep" -c -o "HPS_usleep/HPS_usleep.o" "../HPS_usleep/HPS_usleep.c"
+'Finished building: ../HPS_usleep/HPS_usleep.c'
+' '
+'Building file: ../DE1SoC_LT24/DE1SoC_LT24.c'
+'Invoking: ARM C Compiler 5'
+armcc -O0 -g --md --depend_format=unix_escaped --no_depend_system_headers --depend_dir="DE1SoC_LT24" -c -o "DE1SoC_LT24/DE1SoC_LT24.o" "../DE1SoC_LT24/DE1SoC_LT24.c"
+'Finished building: ../DE1SoC_LT24/DE1SoC_LT24.c'
+' '
+'Building file: ../main.c'
+'Invoking: ARM C Compiler 5'
+armcc -O0 -g --md --depend_format=unix_escaped --no_depend_system_headers -c -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: Lab5_LCD_T2_DDR.axf'
+'Invoking: ARM Linker 5'
+armlink --entry=__main --scatter="C:\Users\Kasem\Documents\DS-5 Workspace\Lab5_LCD_T2_DDR\DDRRomRam.scat" --info=sizes -o "Lab5_LCD_T2_DDR.axf"  ./seven_seg/seven_seg.o  ./HPS_usleep/HPS_usleep.o  ./DE1SoC_LT24/DE1SoC_LT24.o  ./main.o   
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+      2068         40         24        378          0       7899   DE1SoC_LT24.o
+       148          8          0          0          0       1117   HPS_usleep.o
+       524         52         12         20          0       1978   main.o
+      1300          0          0          0          0       2926   seven_seg.o
+
+    ----------------------------------------------------------------------
+      4040        100         36        400  536870912      13920   Object Totals
+         0          0          0          0  536870912          0   (incl. Generated)
+         0          0          0          2          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         8          0          0          0          0         68   __main.o
+         0          0          0          0          0          0   __rtentry.o
+        12          0          0          0          0          0   __rtentry2.o
+         8          4          0          0          0          0   __rtentry6.o
+       416          0          0          0          0        144   aeabi_sdiv.o
+        24          0          0          0          0         80   exit.o
+         0          0          0          0          0          0   indicate_semi.o
+         4          0          0          0          0          0   libinit.o
+         4          0          0          0          0          0   libinit2.o
+         4          0          0          0          0          0   libshutdown.o
+         4          0          0          0          0          0   libshutdown2.o
+       100          0          0          0          0         80   rt_memcpy_w.o
+         4          0          0          0          0          0   rtexit.o
+        12          0          0          0          0          0   rtexit2.o
+        20          4          0          0          0         68   sys_exit.o
+         4          0          0          0          0         68   use_no_semi.o
+       720        140          0          0          0        208   ddiv.o
+       112          4          0          0          0         92   dfixu.o
+       100          0          0          0          0        136   dflt_noclz.o
+       376         16          0          0          0        104   dmul.o
+       184          0          0          0          0         92   dnaninf.o
+        16          0          0          0          0         68   dretinf.o
+         0          0          0          0          0          0   usenofp.o
+
+    ----------------------------------------------------------------------
+      2132        168          0          0          0       1208   Library Totals
+         0          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       624          8          0          0          0        508   c_4.l
+      1508        160          0          0          0        700   fz_4s.l
+
+    ----------------------------------------------------------------------
+      2132        168          0          0          0       1208   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      6172        268         36        400  536870912      14296   Grand Totals
+      6172        268         36        400  536870912      14296   ELF Image Totals
+      6172        268         36        400          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 6208 (   6.06kB)
+    Total RW  Size (RW Data + ZI Data)         536871312 (524288.39kB)
+    Total ROM Size (Code + RO Data + RW Data)       6608 (   6.45kB)
+
+==============================================================================
+
+'Finished building target: Lab5_LCD_T2_DDR.axf'
+' '
+
+23:10:56 Build Finished (took 3s.538ms)
+

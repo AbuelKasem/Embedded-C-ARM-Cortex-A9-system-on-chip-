@@ -1,0 +1,92 @@
+00:35:59 **** Incremental Build of configuration Debug for project lab2_test ****
+make all 
+'Building file: ../main.c'
+'Invoking: ARM C Compiler 5'
+armcc --cpu=Cortex-A9.no_neon.no_vfp --arm -O0 -g --md --depend_format=unix_escaped --no_depend_system_headers -c -o "main.o" "../main.c"
+"../main.c", line 30: Warning:  #177-D: variable "KEY_ptr"  was declared but never referenced
+     volatile int *KEY_ptr  = (int *) 0xFF200050;
+                   ^
+"../main.c", line 31: Warning:  #177-D: variable "i"  was declared but never referenced
+      int i,cnt=2000000;
+          ^
+"../main.c", line 31: Warning:  #177-D: variable "cnt"  was declared but never referenced
+      int i,cnt=2000000;
+            ^
+../main.c: 3 warnings, 0 errors
+'Finished building: ../main.c'
+' '
+'Building target: lab2_test.axf'
+'Invoking: ARM Linker 5'
+armlink --cpu=Cortex-A9.no_neon.no_vfp --entry=__main --scatter="C:\Users\Kasem\Documents\DS-5 Workspace\lab1\FPGARomRam.scat" --info=sizes -o "lab2_test.axf"  ./main.o   
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+      2628          8          0          4          0       3361   main.o
+
+    ----------------------------------------------------------------------
+      2628          8          0          4      16384       3361   Object Totals
+         0          0          0          0      16384          0   (incl. Generated)
+         0          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         8          0          0          0          0         68   __main.o
+         0          0          0          0          0          0   __rtentry.o
+        12          0          0          0          0          0   __rtentry2.o
+         8          4          0          0          0          0   __rtentry6.o
+       380          0          0          0          0         76   aeabi_sdiv.o
+        18          0          0          0          0         80   exit.o
+         0          0          0          0          0          0   indicate_semi.o
+         2          0          0          0          0          0   libinit.o
+         2          0          0          0          0          0   libinit2.o
+         2          0          0          0          0          0   libshutdown.o
+         2          0          0          0          0          0   libshutdown2.o
+         2          0          0          0          0          0   rtexit.o
+        10          0          0          0          0          0   rtexit2.o
+        12          4          0          0          0         68   sys_exit.o
+         2          0          0          0          0         68   use_no_semi.o
+
+    ----------------------------------------------------------------------
+       464          8          0          0          0        360   Library Totals
+         4          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       460          8          0          0          0        360   c_2.l
+
+    ----------------------------------------------------------------------
+       464          8          0          0          0        360   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      3092         16          0          4      16384       3565   Grand Totals
+      3092         16          0          4      16384       3565   ELF Image Totals
+      3092         16          0          4          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 3092 (   3.02kB)
+    Total RW  Size (RW Data + ZI Data)             16388 (  16.00kB)
+    Total ROM Size (Code + RO Data + RW Data)       3096 (   3.02kB)
+
+==============================================================================
+
+'Finished building target: lab2_test.axf'
+' '
+
+00:36:02 Build Finished (took 3s.668ms)
+
